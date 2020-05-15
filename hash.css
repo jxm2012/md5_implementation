@@ -1,0 +1,128 @@
+html {
+line-height: 1.5;
+font-family: "Roboto", sans-serif;
+font-weight: normal;
+color: rgba(0,0,0,0.87);
+scroll-behavior: smooth;
+}
+.col {
+display: inline-block;
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+}
+
+.hidden {
+visibility: hidden;
+}
+
+header {
+padding-top: 10px;
+background: #26a69a;
+border-bottom: 4px solid #eaeaea;
+position: relative;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 200;
+}
+
+.page-header {
+text-align: center;
+font-size: 40px;
+font-weight: 300;
+color: #fff;
+-webkit-font-smoothing: antialiased;
+}
+.page-container {
+min-height: 100%;
+}
+.message-box {
+text-align: center;
+margin-top: 0;
+font-size: 1.5rem;
+font-weight: lighter;
+}
+
+input {
+font-family: "Roboto", sans-serif;
+}
+.row {
+margin-bottom: 10px;
+}
+.col {
+display: inline-block;
+box-sizing: border-box;
+}
+.center-pane {
+margin: 4% 15%;
+}
+.center {
+text-align: center;
+}
+.input-container {
+display: flex;
+justify-content: center;
+}
+
+.input-section {
+margin-bottom: 20px;
+}
+
+.string-input-field {
+line-height: 40px;
+font-size: 28px;
+padding: 10px 20px;
+border: none;
+box-shadow: 0 2px 6px 0 lightgrey;
+min-width: 50%;
+font-weight: lighter;
+}
+
+*:focus, *:active {
+outline: 0;
+}
+
+.string-input-field:focus, .string-input-field:active, .hash-btn:focus, .hash-btn:active {
+box-shadow: 0 4px 10px 0 lightgrey;
+}
+
+.string-input-field::placeholder {
+/* color: lightgrey; */
+font-weight: 100;
+}
+
+.string-output-field {
+  line-height: 40px;
+  font-size: 32px;
+  padding: 10px;
+  border: 2px solid lightgrey;
+  color: #26a69a;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+.hash-btn {
+border: none;
+background: #26a69a;
+color: white;
+box-shadow: 0px 6px 6px 0 lightgrey;
+font-size: 20px;
+padding: 5px 15px;
+cursor: pointer;
+}
+.hash-btn:hover {
+background: #249e93;
+}
+.hash-btn:active {
+box-shadow: inset 0px 0px 4px 0 lightgrey;
+}
+.output-header {
+  font-weight: 400;
+  text-align: center;
+  font-size: 28px;
+  color: darkslategray;
+  margin-bottom: 20px;
+}

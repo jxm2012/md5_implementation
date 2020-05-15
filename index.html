@@ -1,0 +1,82 @@
+<!--
+
+  Jeswin Mathew
+  CSE-4381-002
+  Professor David Levine
+
+MD5 Hash algorithm
+
+Resources used for this project:
+https://cryptojs.gitbook.io/docs/
+
+https://stackoverflow.com/questions/1655769/fastest-md5-implementation-in-javascript
+
+-->
+
+
+
+<!-- basic html document created to display webpage -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MD5 Hash</title>
+  <meta name="description" content="Hstring string hasher" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="hash.css" />
+</head>
+<body>
+  <header id="header">
+    <div class="row">
+      <div class="logo-icon">
+      </div>
+      <div class="page-header">
+      	<!-- writing the header page's title -->
+        MD5 Hash
+      </div>
+    </div>
+  </header>
+  <main id="body">
+    <div class="row">
+      <div class="page-container">
+        <div class="center-pane">
+          <div class="row center">
+            <div class="">
+            	<!-- writing the purpose of the MD5 hashing algorithm -->
+              <h5 class="light message-box">A simple tool to which takes a string input and uses the MD5 hash function to result in 128-bit hash output.</h5>
+            </div>
+          </div>
+          <div name="stringform" class="input-section">
+            <div class="input-container">
+              <input placeholder="Enter String here" id="userInput" type="text" class="string-input-field">
+              <button onClick="hashFunc()" id="hashBtn" class="btn hash-btn">hash string</button>
+            </div>
+          </div>
+          <div class="output-section hidden">
+            <div class="output-header">
+              Hashed Output:
+            </div>
+            <div class="input-container">
+              <input id="hashOutput" type="text" class="string-output-field" readonly>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- calling the javascript scripts sources so I can use the md5 function. Then the hashFunc is called from the CryptoJS library to process the string inputted and display the hashed value.
+   -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+  <script type="text/javascript">
+    
+    const hashFunc = () => {
+      const userInput = document.querySelector("#userInput").value;
+
+      const hash = CryptoJS.MD5(userInput); // defaults to hex
+      document.querySelector(".output-section").classList.remove("hidden");
+      document.querySelector('#hashOutput').value = hash;
+    }
+  </script>
+</body>
+</html>
